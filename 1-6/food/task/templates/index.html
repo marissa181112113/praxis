@@ -13,7 +13,7 @@
             float: top;
             width: 100%;
             background-attachment: fixed;
-            background-color: rgb(255, 0, 149);
+            background-color: rgb(248, 252, 23);
             text-align: center;
         }
         .kanan {
@@ -25,10 +25,10 @@
         }
         .kiri {
             float: left;
-            width: 50%;
+            width: 100%;
             height: 30%;
             text-align: center;
-            background-color: rgba(250, 36, 136, 0.658);
+            background-color: rgb(6, 255, 255);
         }
         .bawah {
             float: bottom;
@@ -50,21 +50,19 @@
                 <form action="" method="post">
                     {% csrf_token %} 
                     <label> Nama </label>
-                    <input type="text" name="item">
+                    <input type="text" name="itemmakan">
                     <br>
                     <label> Jenis </label>
-                    <select name="jenis"> 
+                    <select name="jenismakan"> 
                         <option value="kering">Kering</option>
                         <option value="basah">Basah</option>
-                        <option value="dingin">Dingin</option>
-                        <option value="panas">Panas</option>
                     </select>
                     <br>
                     <label>Jumlah</label>
-                    <input type="number" name="jumlah">
+                    <input type="number" name="jumlahmakan">
                     <br>
                     <label> Harga </label>
-                    <input type="text" name="harga">
+                    <input type="text" name="hargamakan">
                     <br>
                     <button type="submit"> Simpan </button>
 
@@ -72,28 +70,30 @@
                     
                 </form>
             </div>
-            
-            <div class="kanan">
-                <h1>Minuman</h1>
-                <label> Nama </label>
-                    <input type="text" name="item">
-                    <br>
-                    <label> Jenis </label>
-                    <select name="jenis"> 
-                        <option value="dingin">Dingin</option>
-                        <option value="panas">Panas</option>
-                        <option value="biasa">Biasa</option>
-                    </select>
-                    <br>
-                    <label>Jumlah</label>
-                    <input type="number" name="jumlah">
-                    <br>
-                    <label> Harga </label>
-                    <input type="text" name="harga">
-                    <br>
-                    <button type="submit"> Simpan </button> -->
+                
+                <!-- <div class="kanan">
+                    <form>
+                        <h1>Minuman</h1>
+                        <label> Nama </label>
+                            <input type="text" name="itemminum">
+                            <br>
+                            <label> Jenis </label>
+                            <select name="jenisminum"> 
+                                <option value="dingin">Dingin</option>
+                                <option value="panas">Panas</option>
+                                <option value="biasa">Biasa</option>
+                            </select>
+                            <br>
+                            <label>Jumlah</label>
+                            <input type="number" name="jumlahminum">
+                            <br>
+                            <label> Harga </label>
+                            <input type="text" name="hargaminum">
+                            <br>
+                        </form>   
 
-            </div>
+                </div> -->
+            
         </div>
         <div class="bawah">
             <h1>Pesanan</h1>
@@ -109,16 +109,43 @@
                     {% for d in data %} 
                 </tr>
                 <tr>
-                    <td>{{d.item}}</td>
-                    <td>{{d.jenis}}</td>
-                    <td>{{d.jumlah}}</td>
-                    <td>{{d.harga}}</td>  
-                </tr>
+                    <td>{{d.itemmakan}}</td>
+                    <td>{{d.jenismakan}}</td>
+                    <td>{{d.jumlahmakan}}</td>
+                    <td>{{d.hargamakan}}</td>  
                 
+                
+                <td>
+                    <a type="button"class="btn btn-success" href="{{d.id}}/detail">Rincian</a>
+                    <a type="button"class="btn btn-warning" href="#">Edit</a>
+                    <a type="button"class="btn btn-danger" href="{{d.id}}/delete">Hapus</a>
+                </td>
+                </tr>
+    
                     {% endfor %} 
-
-
             </table>
+            <!-- <table>
+                <table class="table table-striped">
+                   
+                    <tr>
+                        {% for d in data %} 
+                    </tr>
+                    <tr>
+                        <td>{{d.itemminum}}</td>
+                        <td>{{d.jenisminum}}</td>
+                        <td>{{d.jumlahminum}}</td>
+                        <td>{{d.hargaminum}}</td>  
+                    
+                    
+                    <td>
+                        <a type="button"class="btn btn-success" href="{{d.id}}/detail">Rincian</a>
+                        <a type="button"class="btn btn-warning" href="#">Edit</a>
+                        <a type="button"class="btn btn-danger" href="{{d.id}}/delete">Hapus</a>
+                    </td>
+                    </tr>
+        
+                        {% endfor %} 
+            </table> -->
         </div>
     </div>
 
