@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD</title>
+    <title>FOOD</title> 
     <link rel="stylesheet" type="text/css" href="core.css">
     <style>
         .atas {
@@ -21,7 +21,7 @@
             width: 50%;
             height: 30%;
             text-align: center;
-            background-color: rgba(250, 36, 136, 0.658);
+            background-color: rgba(250, 36, 136, 0.658); */
         }
         .kiri {
             float: left;
@@ -35,7 +35,7 @@
             background-color: cyan;
             text-align: center;
         }        
-    </style>
+    </style>   
 </head>
 
 <body>
@@ -58,21 +58,16 @@
                         <option value="basah">Basah</option>
                     </select>
                     <br>
-                    <label>Jumlah</label>
+                    <label> Jumlah </label>
                     <input type="number" name="jumlahmakan">
                     <br>
                     <label> Harga </label>
                     <input type="text" name="hargamakan">
                     <br>
-                    <button type="submit"> Simpan </button>
-
-                    
-                    
-                </form>
-            </div>
+                   
                 
-                <!-- <div class="kanan">
-                    <form>
+                <!<div class="kanan">
+    
                         <h1>Minuman</h1>
                         <label> Nama </label>
                             <input type="text" name="itemminum">
@@ -80,7 +75,7 @@
                             <label> Jenis </label>
                             <select name="jenisminum"> 
                                 <option value="dingin">Dingin</option>
-                                <option value="panas">Panas</option>
+                                <option value="hangat">Hangat</option>
                                 <option value="biasa">Biasa</option>
                             </select>
                             <br>
@@ -90,11 +85,13 @@
                             <label> Harga </label>
                             <input type="text" name="hargaminum">
                             <br>
+                            <button type="submit"> Simpan </button>
                         </form>   
 
-                </div> -->
+                </div>
             
         </div>
+        
         <div class="bawah">
             <h1>Pesanan</h1>
             <table class="table table-striped">
@@ -112,40 +109,34 @@
                     <td>{{d.itemmakan}}</td>
                     <td>{{d.jenismakan}}</td>
                     <td>{{d.jumlahmakan}}</td>
-                    <td>{{d.hargamakan}}</td>  
+                    <td>Rp. {{d.hargamakan}}</td>  
                 
                 
                 <td>
-                    <a type="button"class="btn btn-success" href="{{d.id}}/detail">Rincian</a>
-                    <a type="button"class="btn btn-warning" href="#">Edit</a>
+                    
+                    <a type="button"class="btn btn-warning" href="{{d.id}}/edit">Edit</a>
+                    <a type="button"class="btn btn-success" href="{{d.id}}/rincian">Rincian</a>
                     <a type="button"class="btn btn-danger" href="{{d.id}}/delete">Hapus</a>
+                    
                 </td>
                 </tr>
     
                     {% endfor %} 
-            </table>
-            <!-- <table>
-                <table class="table table-striped">
-                   
-                    <tr>
-                        {% for d in data %} 
-                    </tr>
+                    {% for d in data1 %} 
                     <tr>
                         <td>{{d.itemminum}}</td>
                         <td>{{d.jenisminum}}</td>
                         <td>{{d.jumlahminum}}</td>
-                        <td>{{d.hargaminum}}</td>  
-                    
-                    
-                    <td>
-                        <a type="button"class="btn btn-success" href="{{d.id}}/detail">Rincian</a>
-                        <a type="button"class="btn btn-warning" href="#">Edit</a>
-                        <a type="button"class="btn btn-danger" href="{{d.id}}/delete">Hapus</a>
-                    </td>
+                        <td>Rp. {{d.hargaminum}}</td>  
+                        <td>
+                            <a type="button"class="btn btn-warning" href="minum/{{d.id}}/edit">Edit</a>
+                            <a type="button"class="btn btn-success" href="minum/{{d.id}}/detail">Rincian</a>
+                            <a type="button"class="btn btn-danger"  href="minum/{{d.id}}/delete">Hapus</a>
+                        </td>
                     </tr>
+                    {% endfor %} 
+            </table>
         
-                        {% endfor %} 
-            </table> -->
         </div>
     </div>
 

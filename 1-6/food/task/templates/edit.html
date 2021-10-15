@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h1>Makanan</h1>
+        <label> Nama </label>
+        <input type="text" name="itemmakan">
+        <br>
+        <label> Jenis </label>
+        <select name="jenismakan"> 
+            <option value="kering">Kering</option>
+            <option value="basah">Basah</option>
+        </select>
+        <br>
+        <label> Jumlah </label>
+        <input type="number" name="jumlahmakan">
+        <br>
+        <label> Harga </label>
+        <input type="text" name="hargamakan">
+        <br>
+        <h1>Minuman</h1>
+        <label> Nama </label>
+        <input type="text" name="itemminum">
+        <br>
+        <label> Jenis </label>
+        <select name="jenisminum"> 
+            <option value="dingin">Dingin</option>
+            <option value="hangat">Hangat</option>
+            <option value="biasa">Biasa</option>
+        </select>
+        <br>
+        <label> Jumlah </label>
+        <input type="number" name="jumlahminum">
+        <br>
+        <label> Harga </label>
+        <input type="text" name="hargaminum">
+        <br>
+        <button type="submit"> Update </button>
+
+        
+        
+    </form>
+</body>
+</html>
