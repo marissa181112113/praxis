@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> 
+    <title>Document</title>
+</head>
+<bodys>
+    <div class="container mt-5 mb-5">
+        <table id="example" class="table table-bordered" style=" width: 100% ; background-color:#D7E9F7;">
+        <thead style="background-color: #1597E5;">
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Nopol</th>
+                <th>Start date</th>
+                <th>Bayar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <th>1</th>
+                <th>Marissa</th>
+                <th>G2108HD</th>
+                <th>23/11/2021</th>
+                <th>Rp.10000</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Juman</th>
+                <th>B1311GT</th>
+                <th>10/11/2021</th>
+                <th>Rp.5000</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Kakung</th>
+                <th>B2879EQ</th>
+                <th>12/10/2021</th>
+                <th>Rp.5000</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Nilna</th>
+                <th>B2876EQ</th>
+                <th>12/10/2021</th>
+                <th>Rp.10000</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>Naela</th>
+                <th>B1567ER</th>
+                <th>25/11/2021</th>
+                <th>Rp.5000</th>
+            </tr>
+            <tr>
+                <th>6</th>
+                <th>Rahmat</th>
+                <th>G1006BT</th>
+                <th>25/11/2021</th>
+                <th>Rp.5000</th>
+            </tr>
+            <tr>
+                <th>7</th>
+                <th>Laeli</th>
+                <th>D0989EP</th>
+                <th>25/11/2021</th>
+                <th>Rp.10000</th>
+            </tr>
+            <tr>
+                <th>8</th>
+                <th>Leni</th>
+                <th>D1112RT</th>
+                <th>12/10/2021</th>
+                <th>Rp.10000</th>
+            </tr>
+            
+               
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Nopol</th>
+                <th>Start date</th>
+                <th>Bayar</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script> 
+</body>
+</html>
